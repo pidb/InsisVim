@@ -12,6 +12,7 @@ local opts = {
     ["rust-analyzer"] = {
       -- enable clippy on save
       checkOnSave = {
+        enable = false,
         command = "clippy",
       },
     },
@@ -28,7 +29,7 @@ return {
       -- We don't want to call lspconfig.rust_analyzer.setup() when using rust-tools
       rust_tools.setup({
         server = opts,
-        -- NOTICE: require dap 
+        -- NOTICE: require dap
         dap = require("insis.dap.nvim-dap.config.rust"),
       })
     end

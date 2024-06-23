@@ -206,10 +206,10 @@ return {
   { "saadparwaiz1/cmp_luasnip" },
   -- Completion sources
   { "hrsh7th/cmp-vsnip" },
-  { "hrsh7th/cmp-nvim-lsp" }, -- { name = nvim_lsp }
-  { "hrsh7th/cmp-buffer" }, -- { name = 'buffer' },
-  { "hrsh7th/cmp-path" }, -- { name = 'path' }
-  { "hrsh7th/cmp-cmdline" }, -- { name = 'cmdline' }
+  { "hrsh7th/cmp-nvim-lsp" },                -- { name = nvim_lsp }
+  { "hrsh7th/cmp-buffer" },                  -- { name = 'buffer' },
+  { "hrsh7th/cmp-path" },                    -- { name = 'path' }
+  { "hrsh7th/cmp-cmdline" },                 -- { name = 'cmdline' }
   { "hrsh7th/cmp-nvim-lsp-signature-help" }, -- { name = 'nvim_lsp_signature_help' }
   -- common snippets
   { "rafamadriz/friendly-snippets" },
@@ -295,7 +295,7 @@ return {
   -- go
   { "leoluz/nvim-dap-go" },
 
-  --[[ 
+  --[[
   -- TODO: python not work yet
 
   {
@@ -337,4 +337,9 @@ return {
       require("insis.plugins.codeium").init()
     end,
   },
+
+  {
+    "ludovicchabant/vim-gutentags",
+    lazy = false
+  }
 }

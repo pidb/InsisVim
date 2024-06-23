@@ -73,8 +73,8 @@ autocmd("BufEnter", {
   pattern = "*",
   callback = function()
     vim.opt.formatoptions = vim.opt.formatoptions
-      - "o" -- O and o, don't continue comments
-      + "r" -- But do continue when pressing enter.
+        - "o" -- O and o, don't continue comments
+        + "r" -- But do continue when pressing enter.
   end,
 })
 
@@ -101,4 +101,17 @@ autocmd("BufWrite", {
   group = myAutoGroup,
   pattern = "*",
   command = "mkview",
+})
+
+
+autocmd("BufRead", {
+  group = myAutoGroup,
+  pattern = "*.rs",
+  command = "setlocal tags=./rusty-tags.vi;/",
+})
+
+autocmd("BufWritePost", {
+  group = myAutoGroup,
+  pattern = "*.rs",
+  command = 'silent! exec "!rusty-tags vi --quiet --start-dir=" . expand(\'%:p:h\') . "&" | redraw!',
 })

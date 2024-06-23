@@ -50,7 +50,7 @@ local UserConfig = {
   keys = {
     leader_key = " ",
     -- quick save / quite
-    n_save = "<leader>w", -- :w
+    n_save = "<leader>w",       -- :w
     n_force_quit = "<leader>q", -- :qa!
     -- quick move
     n_v_5j = "<C-j>",
@@ -87,8 +87,8 @@ local UserConfig = {
   s_windows = {
     enable = true,
     keys = {
-      split_vertically = "sv",
-      split_horizontally = "sh",
+      split_vertically = "\\",
+      split_horizontally = "|",
       -- close current
       close = "sc",
       -- close others
@@ -160,7 +160,7 @@ local UserConfig = {
   nvimTree = {
     enable = true,
     keys = {
-      toggle = { "<A-m>", "<leader>m" },
+      toggle = { "<A-m>", "<leader>e" },
       refresh = "R",
       -- open / close --
       edit = { "o", "<2-LeftMouse>" },
@@ -177,8 +177,8 @@ local UserConfig = {
       dir_up = "<",
       -- file toggle --
       toggle_git_ignored = "i", --.gitignore (git enable)
-      toggle_dotfiles = ".", -- Hide (dotfiles)
-      toggle_custom = "u", -- togglle custom config
+      toggle_dotfiles = ".",    -- Hide (dotfiles)
+      toggle_custom = "u",      -- togglle custom config
       -- file operate --
       create = "a",
       remove = "d",
@@ -197,7 +197,9 @@ local UserConfig = {
   telescope = {
     enable = true,
     keys = {
-      find_files = { "<C-p>", "ff" },
+      find_files = { "<leader>ff" },
+      git_files = "<leader>fg",
+      commands = "<C-p>",
       live_grep = "<C-f>",
       -- super find  "xx" -tmd ---@see telescope-live-grep-args.nvim
       live_grep_args = "sf",
@@ -264,7 +266,7 @@ local UserConfig = {
     enable = true,
     -- normal mode
     toggler = {
-      line = "gcc", -- line comment
+      line = "gcc",  -- line comment
       block = "gbc", -- block comment
     },
     -- visual mode
@@ -515,10 +517,10 @@ local UserConfig = {
     enable = true,
     code_actions = "gitsigns",
     -- sign display
-    signcolumn = true, -- Toggle with `:Gitsigns toggle_signs`
-    numhl = false, -- Toggle with `:Gitsigns toggle_numhl`
-    linehl = false, -- Toggle with `:Gitsigns toggle_linehl`
-    word_diff = false, -- Toggle with `:Gitsigns toggle_word_diff`
+    signcolumn = true,          -- Toggle with `:Gitsigns toggle_signs`
+    numhl = false,              -- Toggle with `:Gitsigns toggle_numhl`
+    linehl = false,             -- Toggle with `:Gitsigns toggle_linehl`
+    word_diff = false,          -- Toggle with `:Gitsigns toggle_word_diff`
     current_line_blame = false, -- Toggle with `:Gitsigns toggle_current_line_blame`
   },
 

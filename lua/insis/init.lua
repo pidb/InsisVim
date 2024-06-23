@@ -23,6 +23,7 @@ function M.setup(user_config)
   require("insis.format")
   require("insis.dap")
   require("insis.utils.color-preview")
+  require('insis.utils.rusty-tags')
   if M.config.fix_windows_clipboard then
     require("utils.fix-yank")
   end
