@@ -52,6 +52,9 @@ if telescope and lga_actions and cfg and cfg.enable then
   keymap("n", cfg.keys.git_files, "<CMD>Telescope git_files<CR>")
   keymap("n", cfg.keys.live_grep, ":<CMD>Telescope live_grep<CR>")
   keymap("n", cfg.keys.commands, ":<CMD>Telescope commands<CR>")
+  keymap("n", cfg.keys.lsp_document_symbols, ":<CMD>Telescope lsp_document_symbols<CR>")
+  keymap("n", cfg.keys.lsp_workspace_symbols, ":<CMD>Telescope lsp_workspace_symbols<CR>")
+  keymap("n", cfg.keys.live_grep_args, ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
   keymap("n", cfg.keys.live_grep_args, ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
 
   pcall(telescope.load_extension, "env")

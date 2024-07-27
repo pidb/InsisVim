@@ -163,9 +163,9 @@ local UserConfig = {
       toggle = { "<A-m>", "<leader>e" },
       refresh = "R",
       -- open / close --
-      edit = { "o", "<2-LeftMouse>" },
+      edit = { "<CR>", "<2-LeftMouse>" },
       close = "<BS>", -- close parent folder
-      system_open = "<CR>",
+      system_open = "<A-o>",
       vsplit = "sv",
       split = "sh",
       tabnew = "st",
@@ -200,9 +200,11 @@ local UserConfig = {
       find_files = { "<leader>ff" },
       git_files = "<leader>fg",
       commands = "<C-p>",
-      live_grep = "<C-f>",
+      live_grep = "<leader>fw",
       -- super find  "xx" -tmd ---@see telescope-live-grep-args.nvim
-      live_grep_args = "sf",
+      live_grep_args = "<leader>fs",
+      lsp_document_symbols = "<leader>ls",
+      lsp_workspace_symbols = "<leader>lG",
       -- up and down
       move_selection_next = "<C-j>",
       move_selection_previous = "<C-k>",
