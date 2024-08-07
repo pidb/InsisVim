@@ -197,8 +197,11 @@ local UserConfig = {
   telescope = {
     enable = true,
     keys = {
+      -- Files
       find_files = { "<leader>ff" },
       git_files = "<leader>fg",
+      old_files = "<leader>fo",
+
       commands = "<C-p>",
       live_grep = "<leader>fw",
       -- super find  "xx" -tmd ---@see telescope-live-grep-args.nvim

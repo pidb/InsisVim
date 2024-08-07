@@ -49,6 +49,7 @@ if telescope and lga_actions and cfg and cfg.enable then
   })
 
   keymap("n", cfg.keys.find_files, "<CMD>Telescope find_files<CR>")
+  keymap("n", cfg.keys.old_files, "<CMD>Telescope oldfiles<CR>")
   keymap("n", cfg.keys.git_files, "<CMD>Telescope git_files<CR>")
   keymap("n", cfg.keys.live_grep, ":<CMD>Telescope live_grep<CR>")
   keymap("n", cfg.keys.commands, ":<CMD>Telescope commands<CR>")

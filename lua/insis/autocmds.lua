@@ -104,14 +104,14 @@ autocmd("BufWrite", {
 })
 
 
-autocmd("BufRead", {
-  group = myAutoGroup,
-  pattern = "*.rs",
-  command = "setlocal tags=./rusty-tags.vi;/",
-})
+-- autocmd("BufRead", {
+--   group = myAutoGroup,
+--   pattern = "*.rs",
+--   command = "setlocal tags=./rusty-tags.vi;/",
+-- })
 
-autocmd("BufWritePost", {
-  group = myAutoGroup,
-  pattern = "*.rs",
-  command = 'silent! exec "!rusty-tags vi --quiet --start-dir=" . expand(\'%:p:h\') . "&" | redraw!',
-})
+-- autocmd("BufWritePost", {
+--   group = myAutoGroup,
+--   pattern = "*.rs",
+--   command = 'silent! exec "!rusty-tags vi --quiet --start-dir=" . expand(\'%:p:h\') . "&" | redraw!',
+-- })
